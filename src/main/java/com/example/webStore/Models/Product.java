@@ -13,10 +13,18 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     private String name;
     private int quantity;
+    private String Manufacturer;
+    private String description;
+    private int price;
+    private Long category;
+
+    @ManyToOne
+    @JoinColumn(name="category_id")
+    private Category categoryId;
 
 }
