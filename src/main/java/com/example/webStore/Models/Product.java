@@ -21,7 +21,7 @@ public class Product {
     private String Manufacturer;
     private String description;
     private int price;
-    private Long category;
+    private String photo;
 
     @ManyToOne
     @JoinColumn(name="category_id")

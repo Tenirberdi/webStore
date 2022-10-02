@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.stylesheets.LinkStyle;
 
 import javax.persistence.*;
 import java.util.List;
@@ -24,5 +23,5 @@ public class Role {
 
     @OneToMany(mappedBy = "roleId")
     @JsonIgnore
-    private List<User> user;
+    private List<Usr> user;
 }
