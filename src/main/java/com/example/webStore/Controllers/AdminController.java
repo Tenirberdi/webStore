@@ -35,7 +35,7 @@ public class AdminController {
     }
     @GetMapping(value = "/addProduct")
     public String addProduct(Model model) throws Exception {
-        model.addAttribute("categories" , adminService.getCategories());
+        model.addAttribute("categories" , statisticsService.getCategories());
         model.addAttribute("container" , new NewProductDTO());
         return "forms";
     }

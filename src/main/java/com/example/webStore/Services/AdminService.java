@@ -41,9 +41,5 @@ public class AdminService {
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
-    public List<Category> getCategories(){
-        List<Category> list = new ArrayList<>();
-        categoryRepo.findAll().forEach(list::add);
-        return list;
-    }
+
 }

@@ -1,5 +1,6 @@
 package com.example.webStore.Services;
 
+import com.example.webStore.Models.Category;
 import com.example.webStore.Models.Product;
 import com.example.webStore.Repositories.CategoryRepo;
 import com.example.webStore.Repositories.ProductRepo;
@@ -29,6 +30,12 @@ public class StatisticsService {
     public List<Product> getProducts(){
         List<Product> list = new ArrayList<Product>();
         productRepo.findAll().forEach(list::add);
+        return list;
+    }
+
+    public List<Category> getCategories(){
+        List<Category> list = new ArrayList<>();
+        categoryRepo.findAll().forEach(list::add);
         return list;
     }
 }
